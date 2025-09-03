@@ -1,0 +1,302 @@
+----
+[
+    "The total number of eggs used for all sandwiches should not exceed 40",
+    "The total number of slices of bacon used for all sandwiches should not exceed 70",
+    "The number of regular sandwiches and special sandwiches made should be non-negative"
+]
+----
++++++++++++++++++++
+++ Constraint Qs ++
++++++++++++++++++++
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A breakfast joint makes two different sandwiches: a regular and a special. Both need eggs and bacon. Each regular sandwich requires 2 eggs and 3 slices of bacon. Each special sandwich requires 3 eggs and 5 slices of bacon. The joint has a total of 40 eggs and 70 slices of bacon. It makes a profit of $3 per regular sandwich and a profit of $4 per special sandwich. How many of each sandwich should be made to maximize profit?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "NumSandwichTypes": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumSandwichTypes parameter"
+    },
+    "NumIngredients": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumIngredients parameter"
+    },
+    "Required": {
+        "type": "float",
+        "shape": [
+            2,
+            2
+        ],
+        "definition": "Required parameter"
+    },
+    "TotalAvailable": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "TotalAvailable parameter"
+    },
+    "ProfitPerSandwich": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "ProfitPerSandwich parameter"
+    }
+}
+
+
+Consider this potential constraint: The total number of eggs used for all sandwiches should not exceed 40
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the potential constraint stating that the total number of eggs used for all sandwiches should not exceed 40 is indeed an actual constraint. Based on the problem description, the breakfast joint has a total of 40 eggs available to make both regular and special sandwiches. This constraint ensures that the production of sandwiches does not require more eggs than are available.
+
+In an optimization model, such constraints are essential to ensure the feasibility of the solution. It directly influences how many of each type of sandwich can be produced since both types of sandwiches require eggs. By modeling this constraint, we ensure that the solution respects the limited resource availability and remains practical for implementation.
+
+Given the clear statement in the problem description regarding the total egg availability and the requirement of sandwiches for eggs, this constraint should be explicitly included in the (MI)LP formulation. Not including it could lead to a solution that suggests producing more sandwiches than can be actually made with the available eggs, which would be infeasible in practice.
+
+Confidence Level: 5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A breakfast joint makes two different sandwiches: a regular and a special. Both need eggs and bacon. Each regular sandwich requires 2 eggs and 3 slices of bacon. Each special sandwich requires 3 eggs and 5 slices of bacon. The joint has a total of 40 eggs and 70 slices of bacon. It makes a profit of $3 per regular sandwich and a profit of $4 per special sandwich. How many of each sandwich should be made to maximize profit?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "NumSandwichTypes": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumSandwichTypes parameter"
+    },
+    "NumIngredients": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumIngredients parameter"
+    },
+    "Required": {
+        "type": "float",
+        "shape": [
+            2,
+            2
+        ],
+        "definition": "Required parameter"
+    },
+    "TotalAvailable": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "TotalAvailable parameter"
+    },
+    "ProfitPerSandwich": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "ProfitPerSandwich parameter"
+    }
+}
+
+
+Consider this potential constraint: The total number of slices of bacon used for all sandwiches should not exceed 70
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the consideration regarding the total number of slices of bacon used not exceeding 70 is indeed a constraint in the optimization problem. This constraint directly impacts how many sandwiches of each type the breakfast joint can make while adhering to the resource limitations available.
+
+In the scenario described, kitchen resources, particularly the slices of bacon, are limited. We know each regular sandwich uses 3 slices of bacon and each special sandwich uses 5 slices. The problem clearly states that only 70 slices of bacon are available in total. This sets a clear upper limit and needs to be managed properly to maximize the profit ensuring that production stays within the realm of these input constraints.
+
+The constraint modeling how many slices of bacon are used is essential to ensure that the joint does not plan to make more sandwiches than can be supported by the bacon available. It controls the feasible domain of the decision variables (numbers of each type of sandwich) to ensure all solutions respect the resource limits of bacon slices. Not modeling this constraint would allow solutions that might suggest making more sandwiches than the bacon supply would allow, which is not feasible operationally as it would result in resource shortages during production.
+
+Therefore, we must include this constraint in the (MI)LP formulation to ensure that the solution is feasible in real life, respecting the supply limits of eggs and bacon. This strict adherence to resource constraints is typical in operations and production problems and critical for practical and applicable solutions.
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A breakfast joint makes two different sandwiches: a regular and a special. Both need eggs and bacon. Each regular sandwich requires 2 eggs and 3 slices of bacon. Each special sandwich requires 3 eggs and 5 slices of bacon. The joint has a total of 40 eggs and 70 slices of bacon. It makes a profit of $3 per regular sandwich and a profit of $4 per special sandwich. How many of each sandwich should be made to maximize profit?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "NumSandwichTypes": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumSandwichTypes parameter"
+    },
+    "NumIngredients": {
+        "type": "int",
+        "shape": [],
+        "definition": "NumIngredients parameter"
+    },
+    "Required": {
+        "type": "float",
+        "shape": [
+            2,
+            2
+        ],
+        "definition": "Required parameter"
+    },
+    "TotalAvailable": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "TotalAvailable parameter"
+    },
+    "ProfitPerSandwich": {
+        "type": "float",
+        "shape": [
+            2
+        ],
+        "definition": "ProfitPerSandwich parameter"
+    }
+}
+
+
+Consider this potential constraint: The number of regular sandwiches and special sandwiches made should be non-negative
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the constraint suggesting that the number of regular sandwiches and special sandwiches made should be non-negative is indeed a valid constraint. In the context of linear programming and mixed-integer linear programming models, such constraints are essential to ensure that the solution space is realistic and feasible. 
+
+In any production or manufacturing scenario, negative quantities do not make sense as you cannot produce a negative amount of a product. Such constraints are typically defined as non-negativity constraints in optimization problems to ensure that all decision variables, in this case, the number of each type of sandwich, are zero or positive. 
+
+Considering the nature of the problem and general optimization modeling practices, we should model this constraint explicitly to avoid obtuse solutions and maintain the integrity of the model's applicability to real-world scenarios.
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
+
+
+
+++++++++++++++++++++++++++++++
+Extracting constraint formulations
+++++++++++++++++++++++++++++++
+
+
+
+----
+{
+    "FORMULATION": "$2x_{\text{regular}} + 3x_{\text{special}} \leq 40$",
+    "NEW VARIABLES": {
+        "xRegular": {
+            "shape": [],
+            "type": "integer",
+            "definition": "Number of regular sandwiches made"
+        },
+        "xSpecial": {
+            "shape": [],
+            "type": "integer",
+            "definition": "Number of special sandwiches made"
+        }
+    },
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$2x_{\text{regular}} + 3x_{\text{special}} \leq 40$
+{'xRegular': {'shape': [], 'type': 'integer', 'definition': 'Number of regular sandwiches made'}, 'xSpecial': {'shape': [], 'type': 'integer', 'definition': 'Number of special sandwiches made'}}
+[]
+----
+----
+{
+    "FORMULATION": "$3 xRegular + 5 xSpecial \leq 70$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$3 xRegular + 5 xSpecial \leq 70$
+{}
+[]
+----
+----
+{
+    "FORMULATION": "$x_{\text{Regular}} \geq 0 \quad \text{and} \quad x_{\text{Special}} \geq 0$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$x_{\text{Regular}} \geq 0 \quad \text{and} \quad x_{\text{Special}} \geq 0$
+{}
+[]
+----
+Code executed successfully. Output:
+Restricted license - for non-production use only - expires 2026-11-23
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 24.6.0 24G90)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Optimize a model with 4 rows, 2 columns and 6 nonzeros
+Model fingerprint: 0xdfcd7bb5
+Variable types: 0 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [3e+00, 4e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [4e+01, 7e+01]
+Found heuristic solution: objective 60.0000000
+Presolve removed 4 rows and 2 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 10 available processors)
+
+Solution count 1: 60 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+01, best bound 6.000000000000e+01, gap 0.0000%
+Optimal Objective Value:  60.0
+Optimal Objective Value:  60.0
+

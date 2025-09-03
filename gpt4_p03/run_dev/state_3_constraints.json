@@ -1,0 +1,77 @@
+{
+    "description": "A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?",
+    "parameters": {
+        "AdvertisingBudget": {
+            "type": "int",
+            "shape": [],
+            "definition": "AdvertisingBudget parameter"
+        },
+        "CostRadioAd": {
+            "type": "int",
+            "shape": [],
+            "definition": "CostRadioAd parameter"
+        },
+        "CostSocialMediaAd": {
+            "type": "int",
+            "shape": [],
+            "definition": "CostSocialMediaAd parameter"
+        },
+        "ExposureRadioAd": {
+            "type": "int",
+            "shape": [],
+            "definition": "ExposureRadioAd parameter"
+        },
+        "ExposureSocialMediaAd": {
+            "type": "int",
+            "shape": [],
+            "definition": "ExposureSocialMediaAd parameter"
+        },
+        "MinRadioAds": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinRadioAds parameter"
+        },
+        "MaxRadioAds": {
+            "type": "int",
+            "shape": [],
+            "definition": "MaxRadioAds parameter"
+        },
+        "MinSocialMediaAds": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinSocialMediaAds parameter"
+        }
+    },
+    "objective": {
+        "description": "\"The goal is to maximize the total exposure from radio and social media advertisements\"",
+        "formulation": null,
+        "code": null
+    },
+    "constraints": [
+        {
+            "description": "The total cost of radio ads and social media ads should not exceed the advertising budget of $250,000",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of radio ads should be at least 15 and not exceed 40",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of social media ads should be at least 35",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of radio ads should be non-negative",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of social media ads should be non-negative",
+            "formulation": null,
+            "code": null
+        }
+    ]
+}

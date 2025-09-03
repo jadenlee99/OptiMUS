@@ -1,0 +1,50 @@
+{
+  "AdvertisingBudget": {
+    "type": "int",
+    "shape": [],
+    "definition": "AdvertisingBudget parameter",
+    "value": 250000
+  },
+  "CostRadioAd": {
+    "type": "int",
+    "shape": [],
+    "definition": "CostRadioAd parameter",
+    "value": 5000
+  },
+  "CostSocialMediaAd": {
+    "type": "int",
+    "shape": [],
+    "definition": "CostSocialMediaAd parameter",
+    "value": 9150
+  },
+  "ExposureRadioAd": {
+    "type": "int",
+    "shape": [],
+    "definition": "ExposureRadioAd parameter",
+    "value": 60500
+  },
+  "ExposureSocialMediaAd": {
+    "type": "int",
+    "shape": [],
+    "definition": "ExposureSocialMediaAd parameter",
+    "value": 50000
+  },
+  "MinRadioAds": {
+    "type": "int",
+    "shape": [],
+    "definition": "MinRadioAds parameter",
+    "value": 15
+  },
+  "MaxRadioAds": {
+    "type": "int",
+    "shape": [],
+    "definition": "MaxRadioAds parameter",
+    "value": 40
+  },
+  "MinSocialMediaAds": {
+    "type": "int",
+    "shape": [],
+    "definition": "MinSocialMediaAds parameter",
+    "value": 35
+  }
+}

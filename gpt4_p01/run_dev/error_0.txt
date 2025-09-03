@@ -1,0 +1,4 @@
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/nlp4lp_p000/run_dev/code.py", line 49
+    del.setObjective(0.50 * investmentCondos + 1.00 * investmentDetachedHouses, GRB.MAXIMIZE
+       ^
+SyntaxError: invalid syntax

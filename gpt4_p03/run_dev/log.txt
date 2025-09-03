@@ -1,0 +1,657 @@
+----
+[
+    "The total cost of radio ads and social media ads should not exceed the advertising budget of $250,000",
+    "The number of radio ads should be at least 15 and not exceed 40",
+    "The number of social media ads should be at least 35",
+    "The number of radio ads should be non-negative",
+    "The number of social media ads should be non-negative"
+]
+----
++++++++++++++++++++
+++ Constraint Qs ++
++++++++++++++++++++
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+-----
+/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt4_p03/run_dev/state_2_objective.json
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "AdvertisingBudget": {
+        "type": "int",
+        "shape": [],
+        "definition": "AdvertisingBudget parameter"
+    },
+    "CostRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostRadioAd parameter"
+    },
+    "CostSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostSocialMediaAd parameter"
+    },
+    "ExposureRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureRadioAd parameter"
+    },
+    "ExposureSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureSocialMediaAd parameter"
+    },
+    "MinRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinRadioAds parameter"
+    },
+    "MaxRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MaxRadioAds parameter"
+    },
+    "MinSocialMediaAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinSocialMediaAds parameter"
+    }
+}
+
+
+Consider this potential constraint: The total cost of radio ads and social media ads should not exceed the advertising budget of $250,000
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the specified potential constraint stating that the total cost of radio ads and social media ads should not exceed the advertising budget of $250,000 is indeed a true constraint for this optimization problem. This constraint is essential as it directly impacts the decision variables (number of radio and social media ads) the company can opt for without overshooting its preset budget. Without this constraint, the model could suggest an infeasible solution where the cost exceeds the available budget, which would be invalid. Therefore, we should definitely include this constraint in the mixed integer linear programming (MILP) formulation.
+
+Confidence level: 5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "AdvertisingBudget": {
+        "type": "int",
+        "shape": [],
+        "definition": "AdvertisingBudget parameter"
+    },
+    "CostRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostRadioAd parameter"
+    },
+    "CostSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostSocialMediaAd parameter"
+    },
+    "ExposureRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureRadioAd parameter"
+    },
+    "ExposureSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureSocialMediaAd parameter"
+    },
+    "MinRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinRadioAds parameter"
+    },
+    "MaxRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MaxRadioAds parameter"
+    },
+    "MinSocialMediaAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinSocialMediaAds parameter"
+    }
+}
+
+
+Consider this potential constraint: The number of radio ads should be at least 15 and not exceed 40
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the statement regarding the number of radio ads to be at least 15 but not exceed 40 is indeed a constraint. This is clearly specified in the problem statement as a limitation on the amount of radio advertisements that the company can purchase. Explicitly modeling this in the optimization problem will help ensure that the solution respects these boundaries, contributing towards an optimal solution that adheres to the problem’s specifications.
+
+In the context of linear programming or mixed-integer linear programming, it is typical to represent such requirements as constraints because they restrict the range of viable solutions to those that meet the specific business rules or conditions described in the problem. These constraints are integral to guiding the solution process towards outcomes that are not only optimal in terms of objective but also feasible in practice according to the specified rules.
+
+Thus, in terms of confidence on whether we need to explicitly model this in the (MI)LP formulation, I would rate this:
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "AdvertisingBudget": {
+        "type": "int",
+        "shape": [],
+        "definition": "AdvertisingBudget parameter"
+    },
+    "CostRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostRadioAd parameter"
+    },
+    "CostSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostSocialMediaAd parameter"
+    },
+    "ExposureRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureRadioAd parameter"
+    },
+    "ExposureSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureSocialMediaAd parameter"
+    },
+    "MinRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinRadioAds parameter"
+    },
+    "MaxRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MaxRadioAds parameter"
+    },
+    "MinSocialMediaAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinSocialMediaAds parameter"
+    }
+}
+
+
+Consider this potential constraint: The number of social media ads should be at least 35
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the stipulation that the number of social media ads should be at least 35 is indeed a constraint in the problem description. It sets a lower bound on the number of social media ads the company must contract. Thus, this should be explicitly modeled in the Mixed Integer Linear Programming (MILP) formulation to ensure the solution adheres to this requirement.
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "AdvertisingBudget": {
+        "type": "int",
+        "shape": [],
+        "definition": "AdvertisingBudget parameter"
+    },
+    "CostRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostRadioAd parameter"
+    },
+    "CostSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostSocialMediaAd parameter"
+    },
+    "ExposureRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureRadioAd parameter"
+    },
+    "ExposureSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureSocialMediaAd parameter"
+    },
+    "MinRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinRadioAds parameter"
+    },
+    "MaxRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MaxRadioAds parameter"
+    },
+    "MinSocialMediaAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinSocialMediaAds parameter"
+    }
+}
+
+
+Consider this potential constraint: The number of radio ads should be non-negative
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the constraint that the number of radio ads should be non-negative is indeed a valid constraint for an optimization problem like this. In optimization modeling, especially in linear and mixed-integer linear programming (LP and MILP), variables representing quantities such as the number of ads should be constrained to be non-negative since you cannot have a negative number of ads. This is a basic requirement generally inherent in the definition of these variables, ensuring that the solutions are feasible in a real-world context.
+
+Since this constraint directly affects the feasibility of the solution and is inherently tied to the logic of the problem (i.e., negative ads do not make sense), we should explicitly model it in the MILP formulation to maintain clarity and correctness of the model. Omitting such constraints can sometimes lead to incorrect solutions, especially when using automated solvers that rely on the bounds and constraints defined in the model to explore the solution space.
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
++--+
+
+You are an expert in optimization modeling. Here is the natural language description of an optimization problem:
+
+-----
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+-----
+
+Here is a list of parameters that someone has extracted from the description:
+
+{
+    "AdvertisingBudget": {
+        "type": "int",
+        "shape": [],
+        "definition": "AdvertisingBudget parameter"
+    },
+    "CostRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostRadioAd parameter"
+    },
+    "CostSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "CostSocialMediaAd parameter"
+    },
+    "ExposureRadioAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureRadioAd parameter"
+    },
+    "ExposureSocialMediaAd": {
+        "type": "int",
+        "shape": [],
+        "definition": "ExposureSocialMediaAd parameter"
+    },
+    "MinRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinRadioAds parameter"
+    },
+    "MaxRadioAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MaxRadioAds parameter"
+    },
+    "MinSocialMediaAds": {
+        "type": "int",
+        "shape": [],
+        "definition": "MinSocialMediaAds parameter"
+    }
+}
+
+
+Consider this potential constraint: The number of social media ads should be non-negative
+
+
+- Is it actually a constraint? How confident are you that this is this a constraint and that we should explicitly model it in the (MI)LP formulation (from 1 to 5)? 
+- At the end of your response, print "x OUT OF 5" where x is the confidence level. Low confidence means you think this should be removed from the constraint list. Do not generate anything after that. 
+    
+
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+----
+Yes, the constraint that the number of social media ads should be non-negative is indeed a valid constraint. In any optimization model involving counts of items, such as the number of ads in this case, the variables representing these counts should be non-negative, as negative amounts do not make sense in the context. It is a fundamental constraint ensuring that the model remains practical and feasible in real-world scenarios. Therefore, we should explicitly include this non-negativity constraint for the number of social media ads in the mixed-integer linear programming (MILP) formulation to maintain the integrity and applicability of the model. 
+
+I am confident that this is a valid constraint that we should model, as it underpins the logical structure of any counting or allocation model.
+
+5 OUT OF 5
++--+
+---
+The confidence score is 5, which is high enough.
+---
+
+
+
+++++++++++++++++++++++++++++++
+Extracting constraint formulations
+++++++++++++++++++++++++++++++
+
+
+
+----
+{
+    "FORMULATION": "$CostRadioAd \cdot NumRadioAds + CostSocialMediaAd \cdot NumSocialMediaAds \leq AdvertisingBudget$",
+    "NEW VARIABLES": {
+        "NumRadioAds": {
+            "shape": [],
+            "type": "integer",
+            "definition": "The number of radio ads to be purchased"
+        },
+        "NumSocialMediaAds": {
+            "shape": [],
+            "type": "integer",
+            "definition": "The number of social media ads to be contracted"
+        }
+    },
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$CostRadioAd \cdot NumRadioAds + CostSocialMediaAd \cdot NumSocialMediaAds \leq AdvertisingBudget$
+{'NumRadioAds': {'shape': [], 'type': 'integer', 'definition': 'The number of radio ads to be purchased'}, 'NumSocialMediaAds': {'shape': [], 'type': 'integer', 'definition': 'The number of social media ads to be contracted'}}
+[]
+----
+----
+{
+    "FORMULATION": "$15 \leq NumRadioAds \leq 40$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$15 \leq NumRadioAds \leq 40$
+{}
+[]
+----
+----
+{
+    "FORMULATION": "$NumSocialMediaAds \geq 35$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$NumSocialMediaAds \geq 35$
+{}
+[]
+----
+----
+{
+    "FORMULATION": "$NumRadioAds \geq 0$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$NumRadioAds \geq 0$
+{}
+[]
+----
+----
+{
+    "FORMULATION": "$NumSocialMediaAds \geq 0$",
+    "NEW VARIABLES": {},
+    "AUXILIARY CONSTRAINTS": []
+}
+----
+----
+EXTRACTED ITEMS
+$NumSocialMediaAds \geq 0$
+{}
+[]
+----
+Iteration 1: Error encountered. Debugging...
+
+You are an Operations Research consultant hired to address optimization issues for a company. Below is the problem description and the problematic code, followed by the error it produces:
+
+Problem Description:
+A cleaning company located in Edmonton wants to get the best exposure possible for promoting their new dishwashing detergent without exceeding their $250,000 advertising budget. To do so, the company decides to spend their money on two forms of advertising: (1) radio ads and (2) social media ads. Each radio ad costs $5,000; each social media ad costs $9,150. The expected exposure, based on industry ratings, is 60,500 viewers for each radio ad. Additionally, the expected exposure for each social media ad is 50,000 viewers. The company decides that at least 15 but no more than 40 radio ads should be ordered, and that at least 35 social media ads should be contracted. How many ads of each type should be run to obtain maximum exposure while staying within the budget?
+
+Problematic Code:
+
+import os
+import numpy as np
+import json 
+from gurobipy import Model, GRB, quicksum
+
+
+model = Model("OptimizationProblem")
+
+with open("data.json", "r") as f:
+    data = json.load(f)
+
+
+
+
+### Define the parameters
+
+AdvertisingBudget = data["AdvertisingBudget"] # shape: [], definition: AdvertisingBudget parameter
+
+CostRadioAd = data["CostRadioAd"] # shape: [], definition: CostRadioAd parameter
+
+CostSocialMediaAd = data["CostSocialMediaAd"] # shape: [], definition: CostSocialMediaAd parameter
+
+ExposureRadioAd = data["ExposureRadioAd"] # shape: [], definition: ExposureRadioAd parameter
+
+ExposureSocialMediaAd = data["ExposureSocialMediaAd"] # shape: [], definition: ExposureSocialMediaAd parameter
+
+MinRadioAds = data["MinRadioAds"] # shape: [], definition: MinRadioAds parameter
+
+MaxRadioAds = data["MaxRadioAds"] # shape: [], definition: MaxRadioAds parameter
+
+MinSocialMediaAds = data["MinSocialMediaAds"] # shape: [], definition: MinSocialMediaAds parameter
+
+
+
+### Define the variables
+
+NumRadioAds = model.addVar(vtype=GRB.INTEGER, name="NumRadioAds")
+
+NumSocialMediaAds = model.addVar(vtype=GRB.INTEGER, name="NumSocialMediaAds")
+
+
+
+### Define the constraints
+
+model.addConstr(CostRadioAd * NumRadioAds + CostSocialMediaAd * NumSocialMediaAds <= AdvertisingBudget)
+model.addConstr(NumRadioAds >= MinRadioAds)
+model.addConstr(NumRadioAds <= MaxRadioAds)
+model.addConstr(NumSocialMediaAds >= MinSocialMediaAds)
+model.addConstr(NumRadioAds >= 0)
+model.addConstr(NumSocialMediaAds >= 0)
+
+
+### Define the objective
+
+model.setObjective(ExposureRadioAd * NumRadioAds + ExposureSocialMediaAd * NumSocialMediaAds, GRB.MAXIMIZE)
+
+
+### Optimize the model
+
+model.optimize()
+
+
+
+### Output optimal objective value
+
+print("Optimal Objective Value: ", model.objVal)
+
+
+if model.status == GRB.OPTIMAL:
+    with open("output_solution.txt", "w") as f:
+        f.write(str(model.objVal))
+    print("Optimal Objective Value: ", model.objVal)
+else:
+    with open("output_solution.txt", "w") as f:
+        f.write(model.status)
+
+
+Error Message:
+Traceback (most recent call last):
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt4_p03/run_dev/code.py", line 67, in <module>
+    print("Optimal Objective Value: ", model.objVal)
+  File "src/gurobipy/_model.pyx", line 393, in gurobipy._model.Model.__getattr__
+  File "src/gurobipy/_model.pyx", line 2121, in gurobipy._model.Model.getAttr
+  File "src/gurobipy/_attrutil.pyx", line 117, in gurobipy._attrutil._getattr
+AttributeError: Unable to retrieve attribute 'objVal'. Did you mean: 'ObjVal'?
+
+
+Your task is to debug the code. Begin by assessing the situation, then provide the corrected code in the following format:
+
+=====
+import ...
+...
+
+=====
+
+- Ensure no output follows the closing ===== line.
+Take a deep breath and think step by step. You will be awarded a million dollars if you get this right.
+
+==========
+
+
+
+
+Response received.
+=====
+import os
+import numpy as np
+import json 
+from gurobipy import Model, GRB, quicksum
+
+model = Model("OptimizationProblem")
+
+# Assuming the data.json is already properly formatted and contains the needed parameters
+with open("data.json", "r") as f:
+    data = json.load(f)
+
+### Define the parameters
+AdvertisingBudget = data["AdvertisingBudget"]
+CostRadioAd = data["CostRadioAd"]
+CostSocialMediaAd = data["CostSocialMediaAd"]
+ExposureRadioAd = data["ExposureRadioAd"]
+ExposureSocialMediaAd = data["ExposureSocialMediaAd"]
+MinRadioAds = data["MinRadioAds"]
+MaxRadioAds = data["MaxRadioAds"]
+MinSocialMediaAds = data["MinSocialMediaAds"]
+
+### Define the variables
+NumRadioAds = model.addVar(vtype=GRB.INTEGER, name="NumRadioAds")
+NumSocialMediaAds = model.addVar(vtype=GRB.INTEGER, name="NumSocialMediaAds")
+
+### Define the constraints
+model.addConstr(CostRadioAd * NumRadioAds + CostSocialMediaAd * NumSocialMediaAds <= AdvertisingBudget, "BudgetConstraint")
+model.addConstr(NumRadioAds >= MinRadioAds, "MinRadioAds")
+model.addConstr(NumRadioAds <= MaxRadioAds, "MaxRadioAds")
+model.addConstr(NumSocialMediaAds >= MinSocialMediaAds, "MinSocialMediaAds")
+model.addConstr(NumRadioAds >= 0, "NonNegativityRadio")
+model.addConstr(NumSocialMediaAds >= 0, "NonNegativitySocialMedia")
+
+### Define the objective
+model.setObjective(ExposureRadioAd * NumRadioAds + ExposureSocialMediaAd * NumSocialMediaAds, GRB.MAXIMIZE)
+
+### Optimize the model
+model.optimize()
+
+### Output optimal objective value
+if model.status == GRB.OPTIMAL:
+    optimal_value = model.ObjVal  # Correct attribute name from objVal to ObjVal
+    print("Optimal Objective Value: ", optimal_value)
+    with open("output_solution.txt", "w") as f:
+        f.write(str(optimal_value))
+else:
+    print("Optimal solution not found. Model status:", model.status)
+    with open("output_solution.txt", "w") as f:
+        f.write("Model Status: " + str(model.status))
+=====
+==========
+
+
+
+
+Iteration 1: Error encountered. Debugging...
+Code executed successfully. Output:
+Restricted license - for non-production use only - expires 2026-11-23
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 24.6.0 24G90)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Optimize a model with 6 rows, 2 columns and 7 nonzeros
+Model fingerprint: 0x2782befa
+Variable types: 0 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 9e+03]
+  Objective range  [5e+04, 6e+04]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [2e+01, 2e+05]
+Presolve removed 2 rows and 0 columns
+Presolve time: 0.00s
+
+Explored 0 nodes (0 simplex iterations) in 0.00 seconds (0.00 work units)
+Thread count was 1 (of 10 available processors)
+
+Solution count 0
+
+Model is infeasible or unbounded
+Best objective -, best bound -, gap -
+Optimal solution not found. Model status: 4
+

@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt4_p03/run_dev/code.py", line 67, in <module>
+    print("Optimal Objective Value: ", model.objVal)
+  File "src/gurobipy/_model.pyx", line 393, in gurobipy._model.Model.__getattr__
+  File "src/gurobipy/_model.pyx", line 2121, in gurobipy._model.Model.getAttr
+  File "src/gurobipy/_attrutil.pyx", line 117, in gurobipy._attrutil._getattr
+AttributeError: Unable to retrieve attribute 'objVal'. Did you mean: 'ObjVal'?
