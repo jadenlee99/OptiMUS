@@ -1,0 +1,44 @@
+{
+  "TotalGold": {
+    "type": "int",
+    "shape": [],
+    "definition": "TotalGold parameter",
+    "value": 1000
+  },
+  "GoldPerLong": {
+    "type": "int",
+    "shape": [],
+    "definition": "GoldPerLong parameter",
+    "value": 10
+  },
+  "GoldPerShort": {
+    "type": "int",
+    "shape": [],
+    "definition": "GoldPerShort parameter",
+    "value": 7
+  },
+  "MinShortToLongRatio": {
+    "type": "int",
+    "shape": [],
+    "definition": "MinShortToLongRatio parameter",
+    "value": 5
+  },
+  "MinLongCables": {
+    "type": "int",
+    "shape": [],
+    "definition": "MinLongCables parameter",
+    "value": 10
+  },
+  "ProfitPerLong": {
+    "type": "int",
+    "shape": [],
+    "definition": "ProfitPerLong parameter",
+    "value": 12
+  },
+  "ProfitPerShort": {
+    "type": "int",
+    "shape": [],
+    "definition": "ProfitPerShort parameter",
+    "value": 5
+  }
+}

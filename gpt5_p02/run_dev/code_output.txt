@@ -1,0 +1,28 @@
+Optimal Revenue: Restricted license - for non-production use only - expires 2026-11-23
+Gurobi Optimizer version 12.0.3 build v12.0.3rc0 (mac64[arm] - Darwin 24.6.0 24G90)
+
+CPU model: Apple M4
+Thread count: 10 physical cores, 10 logical processors, using up to 10 threads
+
+Optimize a model with 4 rows, 2 columns and 6 nonzeros
+Model fingerprint: 0xdfcd7bb5
+Variable types: 0 continuous, 2 integer (0 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 5e+00]
+  Objective range  [3e+00, 4e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [4e+01, 7e+01]
+Found heuristic solution: objective 60.0000000
+Presolve removed 4 rows and 2 columns
+Presolve time: 0.00s
+Presolve: All rows and columns removed
+
+Explored 0 nodes (0 simplex iterations) in 0.01 seconds (0.00 work units)
+Thread count was 1 (of 10 available processors)
+
+Solution count 1: 60 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 6.000000000000e+01, best bound 6.000000000000e+01, gap 0.0000%
+Optimal Objective Value:  60.0
+

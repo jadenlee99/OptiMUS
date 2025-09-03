@@ -1,0 +1,32 @@
+{
+  "TotalBudget": {
+    "type": "int",
+    "shape": [],
+    "definition": "TotalBudget parameter",
+    "value": 760000
+  },
+  "ProfitPerDollarCondos": {
+    "type": "float",
+    "shape": [],
+    "definition": "ProfitPerDollarCondos parameter",
+    "value": 0.5
+  },
+  "ProfitPerDollarDetachedHouses": {
+    "type": "float",
+    "shape": [],
+    "definition": "ProfitPerDollarDetachedHouses parameter",
+    "value": 1.0
+  },
+  "MinimumPercentageCondos": {
+    "type": "float",
+    "shape": [],
+    "definition": "MinimumPercentageCondos parameter",
+    "value": 0.2
+  },
+  "MinimumInvestmentDetachedHouses": {
+    "type": "int",
+    "shape": [],
+    "definition": "MinimumInvestmentDetachedHouses parameter",
+    "value": 20000
+  }
+}

@@ -1,0 +1,4 @@
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt5_p05/run_dev/code.py", line 51
+    del.setObjective(SeniorWage * numSeniors + YoungAdultWage * numYoungAdults, GRB.MINIMIZE
+       ^
+SyntaxError: invalid syntax

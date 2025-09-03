@@ -1,0 +1,54 @@
+{
+  "NumSandwichTypes": {
+    "type": "int",
+    "shape": [],
+    "definition": "NumSandwichTypes parameter",
+    "value": 2
+  },
+  "NumIngredients": {
+    "type": "int",
+    "shape": [],
+    "definition": "NumIngredients parameter",
+    "value": 2
+  },
+  "Required": {
+    "type": "float",
+    "shape": [
+      2,
+      2
+    ],
+    "definition": "Required parameter",
+    "value": [
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ]
+  },
+  "TotalAvailable": {
+    "type": "float",
+    "shape": [
+      2
+    ],
+    "definition": "TotalAvailable parameter",
+    "value": [
+      40,
+      70
+    ]
+  },
+  "ProfitPerSandwich": {
+    "type": "float",
+    "shape": [
+      2
+    ],
+    "definition": "ProfitPerSandwich parameter",
+    "value": [
+      3,
+      4
+    ]
+  }
+}

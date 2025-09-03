@@ -1,0 +1,67 @@
+{
+    "description": "There is 1000 mg of gold available that is needed to make long and short cables. Long cables require 10 mg of gold while short cables require 7 mg of gold. Because of their compact size, at least 5 times the number of short cables are needed than the long cables. In addition, there needs to be at least 10 long cables made. If each long cable sold results in a $12 profit and each short cable sold results in a $5 profit, how many of each type of cable should be made to maximize profit?",
+    "parameters": {
+        "TotalGold": {
+            "type": "int",
+            "shape": [],
+            "definition": "TotalGold parameter"
+        },
+        "GoldPerLong": {
+            "type": "int",
+            "shape": [],
+            "definition": "GoldPerLong parameter"
+        },
+        "GoldPerShort": {
+            "type": "int",
+            "shape": [],
+            "definition": "GoldPerShort parameter"
+        },
+        "MinShortToLongRatio": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinShortToLongRatio parameter"
+        },
+        "MinLongCables": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinLongCables parameter"
+        },
+        "ProfitPerLong": {
+            "type": "int",
+            "shape": [],
+            "definition": "ProfitPerLong parameter"
+        },
+        "ProfitPerShort": {
+            "type": "int",
+            "shape": [],
+            "definition": "ProfitPerShort parameter"
+        }
+    },
+    "objective": {
+        "description": "\"The goal is to maximize the total profit from producing long and short cables\"",
+        "formulation": null,
+        "code": null
+    },
+    "constraints": [
+        {
+            "description": "Total gold used: 10 * (number of long cables) + 7 * (number of short cables) must be less than or equal to 1000 mg",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of short cables must be at least 5 times the number of long cables",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "At least 10 long cables must be made",
+            "formulation": null,
+            "code": null
+        },
+        {
+            "description": "The number of long cables and the number of short cables must be integers",
+            "formulation": null,
+            "code": null
+        }
+    ]
+}

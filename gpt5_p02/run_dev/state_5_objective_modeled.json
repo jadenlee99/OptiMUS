@@ -1,0 +1,67 @@
+{
+    "description": "A breakfast joint makes two different sandwiches: a regular and a special. Both need eggs and bacon. Each regular sandwich requires 2 eggs and 3 slices of bacon. Each special sandwich requires 3 eggs and 5 slices of bacon. The joint has a total of 40 eggs and 70 slices of bacon. It makes a profit of $3 per regular sandwich and a profit of $4 per special sandwich. How many of each sandwich should be made to maximize profit?",
+    "parameters": {
+        "NumSandwichTypes": {
+            "type": "int",
+            "shape": [],
+            "definition": "NumSandwichTypes parameter"
+        },
+        "NumIngredients": {
+            "type": "int",
+            "shape": [],
+            "definition": "NumIngredients parameter"
+        },
+        "Required": {
+            "type": "float",
+            "shape": [
+                2,
+                2
+            ],
+            "definition": "Required parameter"
+        },
+        "TotalAvailable": {
+            "type": "float",
+            "shape": [
+                2
+            ],
+            "definition": "TotalAvailable parameter"
+        },
+        "ProfitPerSandwich": {
+            "type": "float",
+            "shape": [
+                2
+            ],
+            "definition": "ProfitPerSandwich parameter"
+        }
+    },
+    "objective": {
+        "description": "\"The goal is to maximize the total profit from producing regular and special sandwiches\"",
+        "formulation": "$\\max \\sum_{t=1}^{NumSandwichTypes} ProfitPerSandwich_{t}\\, numSandwiches_{t}$"
+    },
+    "constraints": [
+        {
+            "description": "2 * (number of regular sandwiches) + 3 * (number of special sandwiches) <= 40 (eggs available)",
+            "formulation": "$\\\\sum_{j=1}^{NumSandwichTypes} Required[1,j]\\\\, numSandwiches[j] \\\\le TotalAvailable[1]$",
+            "code": null
+        },
+        {
+            "description": "3 * (number of regular sandwiches) + 5 * (number of special sandwiches) <= 70 (bacon slices available)",
+            "formulation": "$\\\\sum_{t=1}^{NumSandwichTypes} Required[2,t] \\\\cdot numSandwiches[t] \\\\le TotalAvailable[2]$",
+            "code": null
+        },
+        {
+            "description": "number of regular sandwiches and number of special sandwiches are nonnegative integers (non-negativity and integrality)",
+            "formulation": "$\\\\forall i \\\\in \\\\{1,\\\\dots,NumSandwichTypes\\\\},\\\\; numSandwiches[i] \\\\in \\\\mathbb{Z}_{\\\\ge 0}$",
+            "code": null
+        }
+    ],
+    "variables": {
+        "numSandwiches": {
+            "shape": [
+                "NumSandwichTypes"
+            ],
+            "type": "integer",
+            "definition": "Number of sandwiches produced for each sandwich type (regular, special)"
+        }
+    }
+}

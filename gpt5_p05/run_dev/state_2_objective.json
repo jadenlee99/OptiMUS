@@ -1,0 +1,40 @@
+{
+    "description": "A store employs senior citizens who earn $500 per week and young adults who earn $750 per week. The store must keep the weekly wage bill below $30000. On any day, the store requires at least 50 workers, of whom at least 10 must be young adults. To ensure the store runs smoothly, the number of young adults should be at least a third the number of senior citizens. Formulate a LP to minimize the wage bill.",
+    "parameters": {
+        "SeniorWage": {
+            "type": "int",
+            "shape": [],
+            "definition": "SeniorWage parameter"
+        },
+        "YoungAdultWage": {
+            "type": "int",
+            "shape": [],
+            "definition": "YoungAdultWage parameter"
+        },
+        "MaxWeeklyWageBill": {
+            "type": "int",
+            "shape": [],
+            "definition": "MaxWeeklyWageBill parameter"
+        },
+        "MinWorkersPerDay": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinWorkersPerDay parameter"
+        },
+        "MinYoungAdultsPerDay": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinYoungAdultsPerDay parameter"
+        },
+        "MinYoungToSeniorRatio": {
+            "type": "float",
+            "shape": [],
+            "definition": "MinYoungToSeniorRatio parameter"
+        }
+    },
+    "objective": {
+        "description": "\"The goal is to minimize the total weekly wage bill (the sum of wages paid to senior citizens and young adults).\"",
+        "formulation": null,
+        "code": null
+    }
+}

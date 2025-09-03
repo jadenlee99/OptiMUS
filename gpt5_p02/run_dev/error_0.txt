@@ -1,0 +1,4 @@
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt5_p02/run_dev/code.py", line 46
+    del.setObjective(quicksum(ProfitPerSandwich[i] * numSandwiches[i] for i in range(NumSandwichTypes)), GRB.MAXIMIZE
+       ^
+SyntaxError: invalid syntax

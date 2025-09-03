@@ -1,0 +1,4 @@
+  File "/Users/changyeoblee/Desktop/UCB/OptiMUS/data/rag/gpt5_p01/run_dev/code.py", line 47
+    del.setObjective(ProfitPerDollarCondos * investCondos + ProfitPerDollarDetachedHouses * investDetachedHouses, GRB.MAXIMIZE
+       ^
+SyntaxError: invalid syntax

@@ -1,0 +1,35 @@
+{
+    "description": "Mrs. Watson wants to invest in the real-estate market and has a total budget of at most $760000. She has two choices which include condos and detached houses. Each dollar invested in condos yields a $0.50 profit and each dollar invested in detached houses yields a $1 profit. A minimum of 20% of all money invested must be in condos, and at least $20000 must be in detached houses. Formulate an LP that can be used to maximize total profit earned from Mrs. Watson's investment.",
+    "parameters": {
+        "TotalBudget": {
+            "type": "int",
+            "shape": [],
+            "definition": "TotalBudget parameter"
+        },
+        "ProfitPerDollarCondos": {
+            "type": "float",
+            "shape": [],
+            "definition": "ProfitPerDollarCondos parameter"
+        },
+        "ProfitPerDollarDetachedHouses": {
+            "type": "float",
+            "shape": [],
+            "definition": "ProfitPerDollarDetachedHouses parameter"
+        },
+        "MinimumPercentageCondos": {
+            "type": "float",
+            "shape": [],
+            "definition": "MinimumPercentageCondos parameter"
+        },
+        "MinimumInvestmentDetachedHouses": {
+            "type": "int",
+            "shape": [],
+            "definition": "MinimumInvestmentDetachedHouses parameter"
+        }
+    },
+    "objective": {
+        "description": "\"The goal is to maximize the total profit earned from investments in condos and detached houses.\"",
+        "formulation": null,
+        "code": null
+    }
+}
