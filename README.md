@@ -69,6 +69,8 @@ They assessed the models based on two metrics: success rate (the ratio of output
 
 When using GPT-4, the success rate improves with each additional feature, and OptiMUS (Prompt + Debug + Supervised Test + Augmentation) achieves the highest success and execution rates among the five modes. However, with the weaker model (GPT-3.5), the results fluctuate across modes. Because GPT-3.5 makes errors more frequently than GPT-4, debugging or testing can increase the number of incorrect codes. However, augmentation (OptiMUS) significantly improves the success rate by giving the model multiple attempts to solve the problem with different rephrasings.
 
+### AutoTest, Supervised Test, and Augmentation are no longer used in the V0.2 and V0.3 articles.
+
 
 ## Simple Implementation by Jaden Lee
 
